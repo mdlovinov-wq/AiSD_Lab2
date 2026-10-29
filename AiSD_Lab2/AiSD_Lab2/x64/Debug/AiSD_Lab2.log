@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\fraiz\OneDrive\Документы\GitHub\AiSD 2\AiSD_Lab2\AiSD_Lab2\main.cpp(9,22): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  AiSD_Lab2.vcxproj -> C:\Users\fraiz\OneDrive\Документы\GitHub\AiSD 2\AiSD_Lab2\x64\Debug\AiSD_Lab2.exe
