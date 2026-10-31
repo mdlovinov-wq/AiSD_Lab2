@@ -61,7 +61,7 @@ struct List {
     }
 
     T remove(int index) {
-        if (index < 0  index >= _size) {
+        if (index < 0 || index >= _size) {
             throw std::runtime_error("Out of bounds");
         }
         if (index == 0) {
@@ -124,7 +124,7 @@ struct List {
 
 
     Node<T>* findNode(int index) {
-        if (0 > index  index >= _size) {
+        if (0 > index || index >= _size) {
             throw std::runtime_error("Out of bounds");
         }
         Node<T>* current = head;

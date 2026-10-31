@@ -1,20 +1,22 @@
 #include <iostream>
 #include <stdexcept>
+#include <type_traits>
 
+template <typename T>
 struct DynamicArray {
-	int* data = NULL;
+	T* data = NULL;
 	int _size = 0;
 	int _capacity = 2;
 
 	DynamicArray() {
-		data = new int[_capacity];
+		data = new T[_capacity];
 	}
 
-	void add(int elem) {
+	void add(T elem) {
 		add(size(), elem);
 	}
 
-	void add(int index, int elem) {
+	void add(int index, T elem) {
 		if (index < 0 || index > _size) {
 			throw std::runtime_error("Out of bounds");
 		}
@@ -28,6 +30,12 @@ struct DynamicArray {
 		_size++;
 	}
 
+	void addArray(DynamicArray<T> array) {
+		for (int i = 0; i < array.size(); i++) {
+			add(array.find(i));
+		}
+ 	}
+
 	void remove(int index) {
 		if (index < 0 || index >= _size) {
 			throw std::runtime_error("Out of bounds");
@@ -39,7 +47,7 @@ struct DynamicArray {
 		_size--;
 	}
 
-	int find(int index) {
+	T find(int index) {
 		if (index < 0 || index >= _size) {
 			throw std::runtime_error("Out of bounds");
 		}
@@ -53,13 +61,20 @@ struct DynamicArray {
 
 	void print() {
 		for (int i = 0; i < _size; i++) {
-			std::cout << data[i] << " ";
+			if constexpr (std::is_same_v<T, std::array<int, 2>>) {
+				std::cout << data[i][0] << " "
+					<< data[i][1] << '\n';
+			}
+			else {
+				std::cout << data[i] << " ";
+			}
 		}
+		std::cout << '\n';
 	}
 
 	void resize() {
 		_capacity *= 2;
-		int* newData = new int[_capacity];
+		T* newData = new T[_capacity];
 
 		for (int i = 0; i < _size; i++) {
 			newData[i] = data[i];

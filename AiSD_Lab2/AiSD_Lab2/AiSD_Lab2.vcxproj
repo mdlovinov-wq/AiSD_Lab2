@@ -142,6 +142,8 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Lab 1`\List.hpp" />
+    <ClInclude Include="..\..\..\Lab 1`\Stack.hpp" />
     <ClInclude Include="DynamicArray.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

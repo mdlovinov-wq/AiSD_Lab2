@@ -1,7 +1,7 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\fraiz\\onedrive\\документы\\github\\aisd 2\\aisd_lab2\\aisd_lab2\\main.cpp",
+        "Source": "c:\\aisd\\lab 2\\aisd_lab2\\aisd_lab2\\main.cpp",
         "ProvidedModule": "",
         "Includes": [
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\iostream",
@@ -128,8 +128,11 @@
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\clocale",
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\locale.h",
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\ostream",
-            "c:\\users\\fraiz\\onedrive\\документы\\github\\aisd 2\\aisd_lab2\\aisd_lab2\\dynamicarray.hpp",
-            "c:\\users\\fraiz\\onedrive\\документы\\github\\aisd 2\\aisd_lab2\\aisd_lab2\\list.hpp"
+            "c:\\aisd\\lab 2\\aisd_lab2\\aisd_lab2\\dynamicarray.hpp",
+            "c:\\aisd\\lab 2\\aisd_lab2\\aisd_lab2\\list.hpp",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\array",
+            "c:\\aisd\\lab 2\\aisd_lab2\\aisd_lab2\\stack.hpp",
+            "c:\\aisd\\lab 2\\aisd_lab2\\aisd_lab2\\list.hpp"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
