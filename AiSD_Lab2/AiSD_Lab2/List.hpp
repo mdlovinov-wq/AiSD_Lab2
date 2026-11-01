@@ -106,19 +106,19 @@ struct List {
 
 
     void print() {
-        Node<T>* current = head;
+        for (int i = 0; i < size(); i++) {
+            T value = find(i);
 
-        while (current != NULL) {
-            std::cout << current->data;
-
-            if (current->next != NULL) {
-                std::cout << ", ";
+            if constexpr (std::is_same_v<T, std::array<int, 2>>) {
+                std::cout << "[" << value[0] << ", "
+                    << value[1] << "]\n";
             }
-
-            current = current->next;
+            else {
+                std::cout << value << " ";
+            }
         }
 
-        std::cout << std::endl;
+        std::cout << '\n';
     }
 
 

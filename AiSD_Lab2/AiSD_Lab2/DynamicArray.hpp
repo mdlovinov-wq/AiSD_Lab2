@@ -12,6 +12,37 @@ struct DynamicArray {
 		data = new T[_capacity];
 	}
 
+	DynamicArray(const DynamicArray& other) {
+		_size = other._size;
+		_capacity = other._capacity;
+
+		data = new T[_capacity];
+
+		for (int i = 0; i < _size; i++) {
+			data[i] = other.data[i];
+		}
+	}
+
+	DynamicArray& operator=(const DynamicArray& other) {
+    if (this == &other) {
+        return *this;
+    }
+
+    T* newData = new T[other._capacity];
+
+    for (int i = 0; i < other._size; i++) {
+        newData[i] = other.data[i];
+    }
+
+    delete[] data;
+
+    data = newData;
+    _size = other._size;
+    _capacity = other._capacity;
+
+    return *this;
+}
+
 	void add(T elem) {
 		add(size(), elem);
 	}
@@ -70,6 +101,19 @@ struct DynamicArray {
 			}
 		}
 		std::cout << '\n';
+	}
+
+	bool isSorted() {
+		for (int i = 0; i < size() - 1; i++) {
+			if (data[i] > data[i + 1]) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	void clear() {
+		_size = 0;
 	}
 
 	void resize() {

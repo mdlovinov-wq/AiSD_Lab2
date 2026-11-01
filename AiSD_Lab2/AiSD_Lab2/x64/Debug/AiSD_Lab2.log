@@ -1,2 +1,2 @@
 ﻿  main.cpp
-C:\AiSD\Lab 2\AiSD_Lab2\AiSD_Lab2\main.cpp(7,10): error C1083: Не удается открыть файл включение: Stack.hpp: No such file or directory,
+  AiSD_Lab2.vcxproj -> C:\AiSD\Lab 2\AiSD_Lab2\x64\Debug\AiSD_Lab2.exe
